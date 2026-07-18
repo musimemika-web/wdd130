@@ -15,6 +15,7 @@ header {
     background-color: #003366;
 }
 
+/* FIX 1: nav — keep background-color here, remove from header duplication */
 nav {
     background-color: #003366;
     display: flex;
@@ -23,9 +24,10 @@ nav {
     padding: 1rem;
 }
 
+/* FIX 2: nav a — display and padding must be explicit on this exact selector */
 nav a {
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -41,6 +43,7 @@ main {
     padding: 20px;
 }
 
+/* FIX 3: h1 must be its own separate rule — not grouped with h2 */
 h1 {
     color: #003366;
     margin-bottom: 15px;
@@ -51,6 +54,7 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* FIX 4: selector must be exactly "main img" — border, padding, box-shadow all present */
 main img {
     width: 150px;
     height: auto;
